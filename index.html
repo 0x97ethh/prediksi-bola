@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>⚽ Prediksi Bola — Live Scores, Predictions & Streaming</title>
+  <meta name="description" content="Football predictions, live scores, match analysis and free streaming links">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚽</text></svg>">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="app">
+    <!-- Header -->
+    <header class="header">
+      <div class="header-content">
+        <h1>⚽ Prediksi Bola</h1>
+        <p class="subtitle">Live Scores • Predictions • Streaming</p>
+      </div>
+      <div class="header-actions">
+        <button id="theme-toggle" class="btn-icon" title="Toggle dark mode">🌙</button>
+        <button id="refresh-btn" class="btn-icon" title="Refresh data">🔄</button>
+      </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="nav">
+      <button class="nav-btn active" data-tab="matches">📅 Jadwal</button>
+      <button class="nav-btn" data-tab="predictions">🎯 Prediksi</button>
+      <button class="nav-btn" data-tab="standings">📊 Klasemen</button>
+      <button class="nav-btn" data-tab="streams">📺 Streaming</button>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main">
+      <!-- Matches Tab -->
+      <section id="matches" class="tab-content active">
+        <div class="section-header">
+          <h2>📅 Pertandingan Hari Ini</h2>
+          <span class="badge live-badge" id="live-count">0 LIVE</span>
+        </div>
+        <div id="matches-list" class="card-grid">
+          <div class="loading">Loading matches...</div>
+        </div>
+      </section>
+
+      <!-- Predictions Tab -->
+      <section id="predictions" class="tab-content">
+        <div class="section-header">
+          <h2>🎯 Prediksi & Analisis</h2>
+        </div>
+        <div id="predictions-list" class="card-grid">
+          <div class="loading">Loading predictions...</div>
+        </div>
+      </section>
+
+      <!-- Standings Tab -->
+      <section id="standings" class="tab-content">
+        <div class="section-header">
+          <h2>📊 Klasemen</h2>
+        </div>
+        <div id="standings-list" class="card-grid">
+          <div class="loading">Loading standings...</div>
+        </div>
+      </section>
+
+      <!-- Streams Tab -->
+      <section id="streams" class="tab-content">
+        <div class="section-header">
+          <h2>📺 Streaming</h2>
+        </div>
+        <div id="streams-list" class="card-grid">
+          <div class="loading">Loading streams...</div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>Data: ESPN API • Streaming: IPTV-org • Built with ⚡ Vercel</p>
+      <p class="last-update" id="last-update">Last update: --</p>
+    </footer>
+  </div>
+
+  <script src="/app.js"></script>
+</body>
+</html>
